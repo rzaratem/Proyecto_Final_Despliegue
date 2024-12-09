@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inicio - Heladeria Web 1.0</title>
+</head>
+<body>
+<p align="center"><h1>Heladeria Web 1.0</h1></p>
+
+<p align="center"><h1>Bievenido, : {{ user_rs.fullname }}, al Sistema Web de la Heladeria</h1></p>
+
+
+
+
+<p><a href="/productos">Endpoint: Consultar todos los Productos</a></p>
+
+<p><a href="/productos/1">Endpoint: Consultar Productos por ID</a>   -   Ejemplo Consultar Productos por ID: http://localhost:5000/productos/1 </p>
+
+<p><a href="/productos/buscar?nombre=helado">Endpoint: Consultar Productos por nombre</a>   -   Ejemplo Consultar Productos por Nombre: http://localhost:5000/productos/buscar?nombre=helado</p>
+
+<p><a href="/ingredientes">Endpoint: Consultar todos los Ingredientes</a></p>
+
+<p><a href="/ingredientes/1">Endpoint: Consultar Ingredientes por ID</a>      -  Ejemplo  Consultar Ingredientes por ID:   http://localhost:5000/ingredientes/1 </p>
+
+<p><a href="/ver_productos">Ver Lista de Productos</a></p>
+
+
+<p></p>
+<p><h3><a href="{{ url_for('heladeria_bp.logout') }}">Log Out</a></h3></p>
+
+</body>
+</html>

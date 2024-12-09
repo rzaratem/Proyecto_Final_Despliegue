@@ -1,0 +1,42 @@
+<body>
+<p align="center"><h1>Inicio de Sesión Heladeria Web</h1></p>
+
+<form action="{{ url_for('heladeria_bp.login_submit') }}" method="POST">
+    <label for="inputEmail">Correo Electrónico:</label>
+    <input type="email" name="inputEmail" id="inputEmail" required>
+
+    <label for="inputPassword">Contraseña:</label>
+    <input type="password" name="inputPassword" id="inputPassword" required>
+
+    <button type="submit">Iniciar Sesión</button>
+</form>
+
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    <div>
+      {% for category, message in messages %}
+        <div class="alert {{ 'alert-danger' if category == 'error' else 'alert-success' }}">
+          {{ message }}
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endwith %}
+
+
+<!--
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    <div class="container">
+      {% for category, message in messages %}
+        <div class="alert alert-danger" role="alert">
+          {{ message }}
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endwith %}
+-->
+
+</body>
