@@ -1,3 +1,7 @@
 El acceso a Vercel usando la BD con MySQL en railway ya funciona el
 
 https://proyecto-final-despliegue-hwdp.vercel.app/index
+
+Usuario para ingreso a la app
+email: rz@test.com
+Contraseña: test2
